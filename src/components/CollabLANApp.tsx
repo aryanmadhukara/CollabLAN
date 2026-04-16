@@ -102,7 +102,7 @@ export default function CollabLANApp() {
                 initial={{ opacity: 0, scale: 0.98, y: 8 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.1 }}
-                className="min-h-[340px] xl:col-span-7 xl:row-span-2"
+                className="min-h-[340px] xl:col-span-5"
               >
                 <Whiteboard />
               </motion.div>
@@ -111,7 +111,7 @@ export default function CollabLANApp() {
                 initial={{ opacity: 0, scale: 0.98, y: 8 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: 0.16 }}
-                className="min-h-[340px] xl:col-span-5"
+                className="min-h-[340px] xl:col-span-7 xl:row-span-2"
               >
                 <CodeEditorPanel />
               </motion.div>
