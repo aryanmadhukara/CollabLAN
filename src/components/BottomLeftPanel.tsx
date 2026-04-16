@@ -14,8 +14,8 @@ export default function BottomLeftPanel() {
           onClick={() => setTab('chat')}
           className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
             tab === 'chat'
-              ? 'bg-neon-muted text-neon border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
-              : 'border border-transparent text-muted-foreground hover:border-white/8 hover:text-foreground'
+              ? 'bg-neon-muted text-[#1d1d1d] border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
+              : 'border border-transparent text-[#1d1d1d] hover:border-black/10 hover:text-black'
           }`}
         >
           <MessageCircle size={13} />
@@ -25,8 +25,8 @@ export default function BottomLeftPanel() {
           onClick={() => setTab('assistant')}
           className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
             tab === 'assistant'
-              ? 'bg-neon-muted text-neon border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
-              : 'border border-transparent text-muted-foreground hover:border-white/8 hover:text-foreground'
+              ? 'bg-neon-muted text-[#1d1d1d] border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
+              : 'border border-transparent text-[#1d1d1d] hover:border-black/10 hover:text-black'
           }`}
         >
           <Bot size={13} />
@@ -36,8 +36,8 @@ export default function BottomLeftPanel() {
           onClick={() => setTab('files')}
           className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
             tab === 'files'
-              ? 'bg-neon-muted text-neon border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
-              : 'border border-transparent text-muted-foreground hover:border-white/8 hover:text-foreground'
+              ? 'bg-neon-muted text-[#1d1d1d] border border-neon/20 shadow-[0_0_24px_rgba(31,211,198,0.14)]'
+              : 'border border-transparent text-[#1d1d1d] hover:border-black/10 hover:text-black'
           }`}
         >
           <FolderOpen size={13} />

@@ -143,15 +143,16 @@ export async function chatWithWorkspaceAssistant({
         .join('\n')
     : 'No recent team chat messages.';
 
+  const sanitizedHistory = history.filter(
+    message => message.role === 'user' || message.role === 'assistant',
+  );
+
   const messages: ChatCompletionMessageParam[] = [
     {
       role: 'system',
-      content:
-        'You are CollabLAN Assistant, an offline collaboration copilot inside a LAN workspace. Give practical, concise help for planning, coding, debugging, standups, and teammate coordination. Use the provided workspace context when relevant, and be honest when context is missing.',
-    },
-    {
-      role: 'system',
-      content: `Workspace context:
+      content: `You are CollabLAN Assistant, an offline collaboration copilot inside a LAN workspace. Give practical, concise help for planning, coding, debugging, standups, and teammate coordination. Use the provided workspace context when relevant, and be honest when context is missing.
+
+Workspace context:
 Current user: ${currentUser.name}
 Connected peers: ${peerCount}
 
@@ -161,7 +162,7 @@ ${taskSummary}
 Recent team chat:
 ${chatSummary}`,
     },
-    ...history,
+    ...sanitizedHistory,
     {
       role: 'user',
       content: prompt,

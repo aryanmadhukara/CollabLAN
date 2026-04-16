@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import CollabLANApp from "@/components/CollabLANApp";
+import AuthGuard from "@/components/AuthGuard";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -12,5 +13,9 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <CollabLANApp />;
+  return (
+    <AuthGuard>
+      <CollabLANApp />
+    </AuthGuard>
+  );
 }
