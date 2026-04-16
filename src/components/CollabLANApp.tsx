@@ -11,45 +11,49 @@ export default function CollabLANApp() {
   return (
     <PeerProvider>
       <div className="dashboard-shell">
+        <div className="pixel-moon left-[7%] top-[5%] hidden lg:block" />
+        <div className="pixel-star right-[14%] top-[8%] hidden lg:block" />
+        <div className="pixel-cloud left-[28%] top-[10%] hidden xl:block" />
+        <div className="pixel-cloud right-[22%] top-[19%] hidden xl:block" />
         <div className="relative z-10 flex min-h-screen flex-col px-4 py-4 sm:px-6 sm:py-6">
           <motion.header
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className="mx-auto flex w-full max-w-[1600px] flex-col items-start justify-between gap-4 rounded-[1.75rem] border border-white/10 bg-white/5 px-4 py-4 shadow-[0_30px_80px_rgba(3,8,20,0.26)] backdrop-blur-xl sm:px-6 lg:flex-row"
+            className="pixel-window mx-auto flex w-full max-w-[1600px] flex-col items-start justify-between gap-4 px-4 py-4 sm:px-6 lg:flex-row"
           >
             <div className="max-w-3xl">
               <div className="hero-chip">
                 <Sparkles size={14} />
-                Offline-first team workspace
+                Press Start To Collaborate
               </div>
 
               <div className="mt-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-neon/10 neon-glow">
+                <div className="flex h-12 w-12 items-center justify-center bg-[#ffe55c] neon-glow">
                   <Zap size={22} className="text-neon" />
                 </div>
                 <div>
-                  <h1 className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                  <h1 className="pixel-heading text-xl text-white sm:text-2xl">
                     <span className="neon-text">Collab</span>LAN
                   </h1>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Whiteboard, code, chat, files, and task tracking in one cinematic workspace.
+                  <p className="mt-3 max-w-2xl text-[1.1rem] leading-5 text-[#d4efff]">
+                    Build together in a cozy retro world with shared code, chat, tasks, whiteboard notes, and offline AI help.
                   </p>
                 </div>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <div className="metric-pill">
-                  <span className="metric-value">4</span>
-                  <span className="metric-label">Realtime collaboration zones</span>
+                  <span className="metric-value">4 zones</span>
+                  <span className="metric-label">Party screens for teamwork</span>
                 </div>
                 <div className="metric-pill">
-                  <span className="metric-value">P2P</span>
-                  <span className="metric-label">LAN sync without cloud dependency</span>
+                  <span className="metric-value">P2P sync</span>
+                  <span className="metric-label">LAN play with no cloud</span>
                 </div>
                 <div className="metric-pill">
-                  <span className="metric-value">AI</span>
-                  <span className="metric-label">Browser-side code help and guidance</span>
+                  <span className="metric-value">AI guide</span>
+                  <span className="metric-label">Browser side helper mode</span>
                 </div>
               </div>
             </div>
@@ -58,35 +62,35 @@ export default function CollabLANApp() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="metric-pill min-w-0">
                   <span className="section-label">Mode</span>
-                  <div className="mt-1 flex items-center gap-2 text-sm text-white">
+                  <div className="mt-1 flex items-center gap-2 text-[1rem] text-[#17244d]">
                     <Layers3 size={14} className="text-neon" />
-                    Workspace View
+                    Pixel Lobby
                   </div>
                 </div>
                 <div className="metric-pill min-w-0">
                   <span className="section-label">Network</span>
-                  <div className="mt-1 flex items-center gap-2 text-sm text-white">
+                  <div className="mt-1 flex items-center gap-2 text-[1rem] text-[#17244d]">
                     <Wifi size={14} className="text-neon" />
-                    Local Sync
+                    LAN Ready
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-wrap items-center justify-end gap-2">
-                <button className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-foreground transition-all hover:-translate-y-0.5 hover:bg-white/10 hover:text-white">
+                <button className="pixel-button flex items-center gap-2 px-4 py-3 text-[0.55rem] transition-all">
                   <Download size={14} />
-                  Export
+                  Start
                 </button>
-                <div className="rounded-full border border-white/10 bg-white/5 p-1.5">
+                <div className="pixel-window p-1.5">
                   <ConnectionStatus />
                 </div>
               </div>
 
-              <div className="rounded-[1.4rem] border border-white/10 bg-[linear-gradient(135deg,rgba(31,211,198,0.16),rgba(255,255,255,0.04))] p-4">
+              <div className="pixel-window p-4">
                 <div className="section-label">Session Pulse</div>
-                <div className="mt-2 flex items-center gap-2 text-sm text-white">
+                <div className="mt-2 flex items-center gap-2 text-[1rem] text-[#dff7ff]">
                   <Users size={15} className="text-neon" />
-                  Ready for live edits, handoff notes, and shared file drops
+                  Team is ready for quests, handoffs, and live edits
                 </div>
               </div>
             </div>
@@ -136,7 +140,7 @@ export default function CollabLANApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.55 }}
-            className="mx-auto mt-4 flex w-full max-w-[1600px] flex-col items-start justify-between gap-1 rounded-[1.4rem] border border-white/8 bg-white/4 px-4 py-3 text-[11px] text-muted-foreground backdrop-blur-md sm:flex-row sm:items-center sm:px-5"
+            className="pixel-window mx-auto mt-4 flex w-full max-w-[1600px] flex-col items-start justify-between gap-1 px-4 py-3 text-[1rem] text-[#d8f6ff] sm:flex-row sm:items-center sm:px-5"
           >
             <span>Diva Coders • Aryan M • Krishitha CS • Devika Mourya</span>
             <span>TechFlix 2026 • WebRTC P2P + WebLLM AI</span>

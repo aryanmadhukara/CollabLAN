@@ -28,13 +28,13 @@ export default function ConnectionStatus() {
     <div className="relative">
       <button
         onClick={() => setShowPanel(!showPanel)}
-        className="flex items-center gap-2 rounded-full border border-white/10 bg-transparent px-3 py-1.5 transition-all hover:bg-white/6"
+        className="flex items-center gap-2 border-[3px] border-[#0f1736] bg-[#273f6c] px-3 py-1.5 text-[#fef3a2] shadow-[3px_3px_0_#0f1736] transition-all hover:-translate-x-[1px] hover:-translate-y-[1px]"
       >
         <div className={`w-1.5 h-1.5 rounded-full ${isConnected ? 'bg-neon shadow-[0_0_6px_var(--color-neon)]' : 'bg-destructive'}`} />
-        <span className="text-xs text-muted-foreground">
+        <span className="text-xs text-[#fef3a2]">
           {isConnected ? 'P2P Ready' : 'Connecting...'}
         </span>
-        <Users size={14} className="text-muted-foreground" />
+        <Users size={14} className="text-[#fef3a2]" />
         <span className="text-xs font-mono text-neon">{peerCount}</span>
       </button>
 
@@ -45,7 +45,7 @@ export default function ConnectionStatus() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 top-full z-50 mt-2 w-80 rounded-[1.4rem] border border-white/10 bg-[rgba(14,22,37,0.94)] p-4 shadow-2xl backdrop-blur-xl"
+            className="pixel-window absolute right-0 top-full z-50 mt-2 w-80 p-4"
           >
             <div className="flex items-center gap-2 mb-3">
               <Wifi size={16} className="text-neon" />
